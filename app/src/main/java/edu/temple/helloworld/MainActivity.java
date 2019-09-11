@@ -12,7 +12,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //change button's click behavior
+        findViewById(R.id.clickButton).setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View view)
+                    {
+                        ((android.widget.TextView)findViewById(R.id.infoText)).setText("You have clicked the button");
+                    }
+                });
 
     }
 }
